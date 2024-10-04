@@ -1,2 +1,2 @@
 # gloomydoom
-classic doom wad launcher
+doom93 wad launcher
