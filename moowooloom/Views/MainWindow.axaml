@@ -23,6 +23,7 @@
                 <MenuItem Header="Open WAD"/>
                 <MenuItem Header="Open source port"/>
                 <Separator/>
+                <MenuItem Header="Settings"/>
                 <MenuItem Name="MenuButtonExit" Header="Exit" Click="MenuButtonExit_OnClick"/>
             </MenuItem>
             <MenuItem Header="Edit">
