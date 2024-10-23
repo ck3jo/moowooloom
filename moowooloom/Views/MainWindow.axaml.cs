@@ -1,27 +1,38 @@
 using System;
+using System.Threading.Tasks;
+using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Interactivity;
+using Avalonia.ReactiveUI;
+using gloomydoom.ViewModels;
+using ReactiveUI;
 
 namespace gloomydoom.Views;
 
-public partial class MainWindow : Window
+public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
 {
     public MainWindow()
     {
         InitializeComponent();
+        this.WhenActivated(action => 
+            action(ViewModel!.ShowEditWADsWindow.RegisterHandler(MenuButtonEditWADs_OnClick)));
     }
 
-    public void ButtonClicked(object source, RoutedEventArgs args)
+    private void MenuButtonExit_OnClick(object? sender, RoutedEventArgs e)
     {
-        if (Double.TryParse(celsius.Text, out double c))
+        if (Application.Current.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime lifetime)
         {
-            var f = c * (9d / 5d) + 32;
-            fahreheit.Text = f.ToString("0.00");
+            lifetime.Shutdown();
         }
-        else
-        {
-            celsius.Text = "0";
-            fahreheit.Text = "0";
-        }
+    }
+
+    private async Task MenuButtonEditWADs_OnClick(InteractionContext<EditWADsViewModel, WADEditorViewModel?> interaction)
+    {
+        var dialog = new EditWADsWindow();
+        dialog.DataContext = interaction.Input;
+        
+        var result = await dialog.ShowDialog<WADEditorViewModel?>(this);
+        interaction.SetOutput(result);
     }
 }

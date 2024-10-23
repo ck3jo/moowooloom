@@ -6,7 +6,9 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="gloomydoom.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/logo.png"
+        Width="1600"
+        Height="900"
         Title="moowooloomgloomydoom">
 
     <Design.DataContext>
@@ -16,23 +18,23 @@
     </Design.DataContext>
 
     <StackPanel>
-        <Border Margin="5"
-                CornerRadius="10"
-                Background="LightBlue">
-            <TextBlock Margin="5"
-                       FontSize="24"
-                       HorizontalAlignment="Center"
-                       Text="Temperature Converter">
-            </TextBlock>
-        </Border>
-        <Grid ShowGridLines="False" Margin="5"
-              ColumnDefinitions="120, 100" 
-              RowDefinitions="Auto, Auto, Auto">
-            <Label Grid.Row="0" Grid.Column="0" Margin="0.5">Celsius</Label>
-            <TextBox Name="celsius" Grid.Row="0" Grid.Column="1" Margin="0.5" Text="0"></TextBox>
-            <Label Grid.Row="1" Grid.Column="0" Margin="0.5">Fahrenheit</Label>
-            <TextBox Name="fahreheit" Grid.Row="1" Grid.Column="1" Margin="0.5" Text="0"></TextBox>
-            <Button Click="ButtonClicked" Grid.Row="2" Grid.Column="1" Margin="0.5">Calculate</Button>
-        </Grid>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Open WAD"/>
+                <MenuItem Header="Open source port"/>
+                <Separator/>
+                <MenuItem Name="MenuButtonExit" Header="Exit" Click="MenuButtonExit_OnClick"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Name="MenuButtonEditWADs" Header="Edit WADs" Command="{Binding ShowEditWADsCommand}"/>
+                <MenuItem Header="Edit source ports"/>
+                <MenuItem Header="Edit IDGames/Doomworld integration"/>
+                <MenuItem Header="Edit settings"/>
+            </MenuItem>   
+            <MenuItem Header="Help">
+                <MenuItem Header="Open GitHub page"/>
+                <MenuItem Header="About"/>
+            </MenuItem>
+        </Menu>
     </StackPanel>
 </Window>
