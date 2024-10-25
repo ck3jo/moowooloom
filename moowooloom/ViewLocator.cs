@@ -1,9 +1,9 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using gloomydoom.ViewModels;
+using moowooloom.ViewModels;
 
-namespace gloomydoom;
+namespace moowooloom;
 
 public class ViewLocator : IDataTemplate
 {

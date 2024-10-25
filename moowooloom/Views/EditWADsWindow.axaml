@@ -5,7 +5,7 @@
         mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="400"
         Width="1200" Height="720"
         WindowStartupLocation="CenterOwner"
-        x:Class="gloomydoom.Views.EditWADsWindow"
+        x:Class="moowooloom.Views.EditWADsWindow"
         Icon="/Assets/logo.png"
         Title="Edit WADs">
 

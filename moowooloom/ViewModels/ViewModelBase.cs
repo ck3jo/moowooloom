@@ -1,6 +1,6 @@
 ﻿using ReactiveUI;
 
-namespace gloomydoom.ViewModels;
+namespace moowooloom.ViewModels;
 
 public class ViewModelBase : ReactiveObject
 {

@@ -5,6 +5,7 @@
       <map>
         <entry key="gloomydoom/App.axaml" value="gloomydoom/gloomydoom.csproj" />
         <entry key="gloomydoom/Views/MainWindow.axaml" value="gloomydoom/gloomydoom.csproj" />
+        <entry key="moowooloom/App.axaml" value="moowooloom/moowooloom.csproj" />
         <entry key="moowooloom/Views/EditWADsWindow.axaml" value="moowooloom/moowooloom.csproj" />
         <entry key="moowooloom/Views/MainWindow.axaml" value="moowooloom/moowooloom.csproj" />
       </map>

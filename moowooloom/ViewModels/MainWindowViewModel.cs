@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using ReactiveUI;
 
-namespace gloomydoom.ViewModels;
+namespace moowooloom.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
 {

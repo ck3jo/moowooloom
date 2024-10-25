@@ -1,4 +1,4 @@
-﻿namespace gloomydoom.ViewModels;
+﻿namespace moowooloom.ViewModels;
 
 public class EditWADsViewModel
 {

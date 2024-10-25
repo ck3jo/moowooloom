@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using gloomydoom.ViewModels;
-using gloomydoom.Views;
+using moowooloom.ViewModels;
+using moowooloom.Views;
 
-namespace gloomydoom;
+namespace moowooloom;
 
 public partial class App : Application
 {

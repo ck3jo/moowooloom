@@ -5,10 +5,10 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Interactivity;
 using Avalonia.ReactiveUI;
-using gloomydoom.ViewModels;
+using moowooloom.ViewModels;
 using ReactiveUI;
 
-namespace gloomydoom.Views;
+namespace moowooloom.Views;
 
 public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
 {

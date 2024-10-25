@@ -2,7 +2,7 @@
 using Avalonia.ReactiveUI;
 using System;
 
-namespace gloomydoom;
+namespace moowooloom;
 
 sealed class Program
 {
